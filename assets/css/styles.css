@@ -1,0 +1,202 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+html, body {
+  font-family: "PT Serif", serif;
+}
+
+#map {
+  height: 700px;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+}
+
+.map-option {
+  max-height: 700px;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+}
+
+.aqi-level {
+  border: 1px solid;
+  /* padding: 40px; */
+  width: 200px;
+  box-shadow: 2px 5px 8px #888888;
+  text-shadow:-1px -1px 0 #000;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #007bff47;
+}
+
+.locationSel {
+  width: 100%;
+}
+
+.aqival {
+  text-shadow:1px 1px 0 #000;
+}
+
+.chart-div {
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+}
+
+.marker {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /* background-color: rgb(243, 53, 53); */
+  border: solid 1px black;
+  font-weight: 900;
+  padding: 8px;
+  font-size: 15px;
+  top: -8px;
+}
+
+.marker::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: solid 8px transparent;
+  border-top-color: black;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#target {
+  width: 345px;
+}
+
+.hosp-desc-cls {
+  float: left;
+  width: 100%;
+  overflow-y: auto;
+  height: 420px;
+  max-height: 400px;
+}
+
+.air-comp-cls {
+  float: left;
+  width: 100%;
+  overflow-y: auto;
+  height: 420px;
+  max-height: 400px;
+}
+
+.dos-icon {
+  color: rgb(0, 211, 0);
+}
+
+.donts-icon {
+  color: rgb(255, 62, 28);
+}
+
+/* Scroll Bar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(104, 104, 104) rgb(241, 241, 241);
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: rgb(241, 241, 241);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(104, 104, 104);
+  border-radius: 20px;
+  border: 3px solid rgb(241, 241, 241);
+}
+
+/* .ui-autocomplete {
+  position: absolute !important;
+  top: 45px !important;
+  left: 305px !important;
+  cursor: default !important; 
+} */
+
+.def-loc-icon {
+  color: rebeccapurple;
+}
+.def-loc-list{
+  font-size: 2vw;
+  font-weight: 800;
+}
+
+#loc-search {
+  width: 360px;
+}

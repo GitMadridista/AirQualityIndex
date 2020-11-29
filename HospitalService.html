@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hospitals Search Servie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initAutocomplete&libraries=places&v=weekly"
+    defer></script> -->
+    <!-- AIzaSyDX1sfuRm00ShguGkDwxFtQhS8jV-C_ytw -->
+    <!-- MAP API -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+
+    <link rel="stylesheet" href="assets\css\styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="assets\js\config\locations.js"></script>
+    <script src="assets\js\config\icons.js"></script>
+    <script src="assets\js\config\staticconstants.js"></script>
+    <script src="assets\js\mainmap.js"></script>
+    <script src="assets\js\hospital.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="javascript:void(0)">Your Logo</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-4">
+                    <a class="nav-link fas fa-home" href="MapHome.html"> Home</a>
+                </li>
+                <li class="nav-item ml-4">
+                    <a class="nav-link fas fa-question" href="AQIInfo.html"> What is AQI?</a>
+                </li>
+
+                <li class="nav-item ml-4">
+                    <a class="nav-link fas fa-chart-bar" href="AQIGraph.html"> AQI Chart</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <!-- <form class="form-inline my-2 my-lg-0"> -->
+                  <!-- <input id="pac-input" class="controls form-control mr-sm-2" type="text" placeholder="Search in map" /> -->
+                  <input id="loc-search" type="search" name="hospital" class="controls form-control mr-sm-2"
+                    placeholder="Search">
+                  <!-- </form> -->
+                </li>
+              </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-md-9">
+                <div id="map"></div>
+            </div>
+            <div class=" col-md-3 p-3 map-option">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="btn-hos" data-toggle="tab" href="#hosptab"> <i class="fas fa-hospital">
+                            </i> Hospitals</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content mt-2">
+                    <div id="defaultPlacesHosp">
+                        <h4> <i class="fas fa-angle-right"></i> Select a place</h4>
+                        <hr>
+                        <div class="list-group list-group-flush">
+          
+                        </div>
+                    </div>
+                    <div id="hosptab" class="container tab-pane active"><br>
+                        <a title="Go Back" href="HospitalService.html" style="font-size: 18px; color: black; text-decoration: none;" class="fas fa-arrow-circle-left"> Go Back</a>
+                        <hr>
+                        <h5> <span class="fas fa-map-marker-alt"></span>&nbsp;<span class="location">Search a place</span>
+                        </h5>
+                        <hr>
+                        <p>
+                        <h3 class="aqival"></h3>
+                        </p>
+                        <hr>
+                        <div class="hosp-desc-cls">
+                            <p id="hosp-desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- <div class="row p-4">
+            <div class="col-md-12 chart-div">
+                <div class="col-md-12 p-4">
+                    <h2>Hospitals</h2>
+                    <hr>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+
+</html>

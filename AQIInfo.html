@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AQI Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="assets\css\styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="javascript:void(0)">Your Logo</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ml-4">
+                    <a class="nav-link fas fa-home" href="MapHome.html"> Home</a>
+                </li>
+                <li class="nav-item ml-4">
+                    <a class="nav-link fas fa-chart-bar" href="AQIGraph.html"> AQI Chart</a>
+                </li>
+                <li class="nav-item ml-4">
+                    <a class="nav-link fas fa-ambulance" href="HospitalService.html"> Hospitals</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <center>
+                        <h1>Know More About AQI</h1>
+                    </center>
+                    <div class="">
+                        <h3>What is AQI?</h3>
+                        
+                        <p>The Air Quality Index measures the quality of air. It shows the amount and types of gases
+                            dissolved in the air.
+                            The air quality index is composed of 8 pollutants ((PM10, PM2.5, NO2, SO2, CO, O3, NH3, and
+                            Pb).
+                            There are 6 categories of the air have been created in this air quality index. These
+                            categories indicate different air quality.
+                            Lets learn more about them.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <ul class="nav nav-pills" style="color: white" role="tablist">
+                    <li class="nav-item pl-5 mt-2">
+                        <a class="nav-link aqi-level active" style="color: rgba(0,255,50,1);" data-toggle="pill"
+                            href="#level1">Good<p>0-50</p></a>
+                    </li>
+                    <li class="nav-item pl-5 mt-2">
+                        <a class="nav-link aqi-level" style="color: rgba(233,255,0,1);" data-toggle="pill"
+                            href="#level2">Moderate<p>51-100</p></a>
+                    </li>
+                    <li class="nav-item pl-5 mt-2">
+                        <a class="nav-link aqi-level" style="color: rgba(255,183,0,1);" data-toggle="pill"
+                            href="#level3">Poor<p>101-200</p></a>
+                    </li>
+
+                    <li class="nav-item pl-5 mt-2">
+                        <a class="nav-link aqi-level" style="color: rgba(255,113,0,1);" data-toggle="pill"
+                            href="#level4">Unhealthy<p>201-300</p></a>
+                    </li>
+                    <li class="nav-item pl-5 mt-2">
+                        <a class="nav-link aqi-level" style="color: rgba(255,77,0,1);" data-toggle="pill"
+                            href="#level5">Severe<p>301-400</p></a>
+                    </li>
+                    <li class="nav-item pl-5 mt-2">
+                        <a class="nav-link aqi-level" style="color: rgba(255,0,0,1);" data-toggle="pill"
+                            href="#level6">Hazardous<p>401-500</p></a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="level1" class="container tab-pane active"><br>
+                        <h3>Good (0-50)</h3>
+                        <p>When the AQI level (air quality index) is below 50, people are breathing fresh, clean air.
+                            People are no longer exposed to any health risk because the quality of air is pure.</p>
+                        <hr>
+                            <div class="row">
+                            <div class="col-md-6">
+                                <ul class="dos-icon" style="list-style-type:none;">
+                                    <li><a class="dos-icon fas fa-check-circle" >
+                                        Breathe as much fresh air as you can.
+                                    </a></li>
+                                    <li><a class="dos-icon fas fa-check-circle" >
+                                        Try to use eco- friendly modes of transportation.
+                                    </a></li>
+                                    <li><a class="dos-icon fas fa-check-circle" >
+                                        Be highly active outside and spend more time.
+
+                                    </a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul style="list-style-type:none;">
+                                    <li>
+                                        <a class="donts-icon fas fa-times-circle" >
+                                            Do not burn the garbage.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="donts-icon fas fa-times-circle" >
+                                            Do not use pollution emitting vehicles too much.
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="donts-icon fas fa-times-circle" >
+                                            Do not contaminate the ambient air.
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="level2" class="container tab-pane fade"><br>
+                        <h3>Moderate (51-100)</h3>
+                        <p>AQI level between 51-100 signifies an acceptable air quality for a healthy adult but may
+                            still pose a threat to a sensitive individual.</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="dos-icon" style="list-style-type:none;">
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Spend time outdoors but in moderation.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Sensitive people should take more breaks often and carry their medicines along.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            People with heart and lung diseases should keep their outdoor activities in check.
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle">
+                                                Avoid heavy exertion outdoors.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not get involved in activities which make air dirty and polluted.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Asthmatics should avoid being outdoors as they may experience breathing problems.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="level3" class="container tab-pane fade"><br>
+                        <h3>Poor (101-200)</h3>
+                        <p>With AQI levels between 101-200, the poor air quality can affect people’s health and cause
+                            discomfort to people with heart diseases.</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="dos-icon" style="list-style-type:none;">
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            People suffering from respiratory problems should spend time indoors.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Reduce prolonged or heavy exertion outside.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Take more breaks in between while performing outdoor activities.
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not get involved in strenuous physical activities outdoors.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not step outside without taking precautionary measures.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                People with respiratory problems should avoid being outdoors.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div id="level4" class="container tab-pane fade"><br>
+                        <h3>Unhealthy (201-300)</h3>
+                        <p>AQI level between 201-300 is a result to your constant health issues. Breathing unhealthy air
+                            causes various respiratory illness such as feeling nauseous, running temperature, cough &
+                            cold, etcetera.</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="dos-icon" style="list-style-type:none;">
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Take more breaks in between while performing outdoor activities.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            People who are sensitive should shift their activities indoors.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Reduce prolonged or heavy exertion outside.
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not get involved in strenuous physical activities outdoors.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not step outside without taking precautionary measures.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Sensitive people should avoid getting involved in prolonged or heavy exertion.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="level5" class="container tab-pane fade"><br>
+                        <h3>Severe (301-400)</h3>
+                        <p>With AQI levels reaching such a dangerous level, the deadly air pollutants are making their
+                            way in your lungs causing you severe discomfort and health issues.</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="dos-icon" style="list-style-type:none;">
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Reschedule necessary outdoor activities to the time when air quality is comparatively better.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Perform more indoor activities.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            People suffering from respiratory problems should spend time indoors.
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not step outside without wearing air pollution protection mask.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Sensitive people should avoid getting involved in prolonged or heavy exertion.  
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not perform prolonged or heavy exertion at all.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                    <div id="level6" class="container tab-pane fade"><br>
+                        <h3>Hazardous (401-500)</h3>
+                        <p>AQI level exceeding 401+ is highly unacceptable to the health. Lung cancer, chronic
+                            obstructive pulmonary disease, and emphysema are a few chronic health conditions caused by
+                            breathing poisonous air.</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="dos-icon" style="list-style-type:none;">
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Take necessary measures to keep indoor air pollutants level low.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Keep medicines handy while going outside.
+                                        </a></li>
+                                        <li><a class="dos-icon fas fa-check-circle" >
+                                            Try to stay indoors as much as possible.
+                                        </a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul style="list-style-type:none;">
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Avoid all types of physical activities outside.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Do not step outside the home without taking all precautionary measures.
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="donts-icon fas fa-times-circle" >
+                                                Don’t indulge in any kind of exertion while being outdoors.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
